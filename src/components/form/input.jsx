@@ -2,7 +2,7 @@ import React from 'react';
 
 function Input(props){
 
-    const { label, type, placeholder, icon, disabled } = props
+    const { label, type, placeholder, disabled } = props
 
     const {touched ,error} = props.meta
 

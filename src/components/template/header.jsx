@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import Input from '../form/input';
 
-import Select from '../form/select';
+// import Select from '../form/select';
 
 function Header() {
 
@@ -14,7 +14,7 @@ function Header() {
     console.log(values)
   }
 
-  const dataGenres = [{id: '', name: 'selecione'}]
+  // const dataGenres = [{id: '', name: 'selecione'}]
 
   return (
     <nav className={`navbar navbar-custom navbar-expand navbar-dark navbar-light`}>

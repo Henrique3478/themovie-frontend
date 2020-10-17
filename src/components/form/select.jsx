@@ -2,7 +2,7 @@ import React from 'react';
 
 function Select(props){
 
-    const { label, disabled } = props
+    const { disabled } = props
 
     const {touched ,error, data} = props.meta
 
