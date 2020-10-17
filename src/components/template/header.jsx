@@ -4,9 +4,14 @@ import { Form, Field } from 'react-final-form';
 
 import { Link } from 'react-router-dom';
 
-import Input from '../form/input';
+import InputSearch from '../form/inputSearch';
 
 // import Select from '../form/select';
+
+const styleSearch = {
+  background: 'rgba(0,0,0,0.1)',
+  border: '1px solid #fff'
+}
 
 function Header() {
 
@@ -17,10 +22,13 @@ function Header() {
   // const dataGenres = [{id: '', name: 'selecione'}]
 
   return (
-    <nav className={`navbar navbar-custom navbar-expand navbar-dark navbar-light`}>
+    <nav className={`navbar navbar-custom navbar-expand navbar-dark`}>
       <ul className="navbar-nav">
-        <li className="nav-item d-none d-sm-inline-block">
-          <Link to={`/`} className={`nav-link`}>Home</Link>
+        <li className="nav-item">
+          <Link to={`/`} className={`nav-link`}>Filmes</Link>
+        </li>
+        <li className="nav-item">
+          <Link to={`/`} className={`nav-link`}>Séries</Link>
         </li>
       </ul>
       <ul className={`navbar-nav ml-auto`}>
@@ -28,20 +36,14 @@ function Header() {
           onSubmit={onSubmit}
           render={({handleSubmit}) => (
             <form onSubmit={handleSubmit} className="form-inline ml-3">
-              <div className="input-group input-group-sm">
-                <Field
-                  component={Input}
-                  name={`pesquisar`}
-                  type={`text`}
-                  className={`form-control form-control-navbar`}
-                  placeholder={`Digite o nome do filme`}
-                />
-                <div className="input-group-append">
-                  <button className="btn btn-navbar" type="submit">
-                    <i className="fas fa-search"></i>
-                  </button>
-                </div>
-              </div>
+              <Field
+                component={InputSearch}
+                name={`pesquisar`}
+                type={`search`}
+                className={`form-control form-control-navbar`}
+                style={styleSearch}
+                placeholder={`Digite o nome do filme`}
+              />
             </form>
         )}/>
       </ul>
