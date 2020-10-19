@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 import { Carousel } from 'react-responsive-carousel';
 
-import { getMovies, getGenres } from './actions';
+import { getMovies, getGenres, getTrendings } from './actions';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -22,32 +22,23 @@ const styleSearch = {
     color: '#fff'
 }
 
-
-const moviesRelease = [
-    {
-        id: 1,
-        image: 'https://i.pinimg.com/originals/86/c0/8e/86c08ed4610de49a5742cb3ba7d43fdd.jpg',
-    },
-    {
-        id: 2,
-        image: 'https://vaeveja.files.wordpress.com/2018/02/vurdalaki.jpg',
-    },
-    {
-        id: 3,
-        image: 'https://podcastloschicos.com.br/wp-content/uploads/2016/05/29maio4junho1.jpg',
-    },
-]
-
 function Index(){
 
     const [ movies, setMovies ] = useState([])
     const [ genres, setGenres ] = useState([])
+    const [ trendings, setTrendings ] = useState([])
     
     useEffect(() => {
         getMovies('', setMovies)
         getGenres('', setGenres)
+        getTrendings('', setTrendings)
     },[])
 
+    let moviesRelease = [];
+
+    if(trendings.length > 0){
+        moviesRelease = trendings.map(row => ({id: row.id, image: row.backdrop_path}))
+    }
 
     let moviesList = [];
 

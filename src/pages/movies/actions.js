@@ -15,3 +15,10 @@ export const getGenres = async (params = '', setState) => {
     setState(data.response.content)
 
 }
+
+export const getTrendings = async (params = '', setState) => {
+
+    const { data } = await axios.get(BASE_API + '/trending' + params);
+    setState(data.response.content)
+
+}
