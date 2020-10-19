@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 import Slider from '../../components/slider';
 
 import { Carousel } from 'react-responsive-carousel';
+
+// import axios from 'axios';
+
+// import { BASE_API } from '../../config/const';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -63,6 +67,22 @@ const moviesRelease = [
 ]
 
 function Index(){
+    
+    // const [ movies, setMovies ] = useState([])
+
+    // const getMovies = useCallback(async () => {
+    //     const response = await axios.get(BASE_API + '/movies');
+    //     if(response.data.response.content.length > 0){
+    //         const movieResponse = response.data.response.content.map(row => 
+    //             ({id: row.id, image: row.backdrop_path, imageBg: row.backdrop_path, title: row.original_title}
+    //         ))
+    //         setMovies(movieResponse)
+    //     }
+    // },[])
+
+    // useEffect(() => {
+    //     getMovies()
+    // },[getMovies])
 
     return(
         <>
@@ -83,7 +103,7 @@ function Index(){
                     <div className={`col-md-11`}>
                         <Slider>
                             {movies.map(movie => (
-                                <Slider.Item movie={movie} key={movie.id}>item1</Slider.Item>
+                                <Slider.Item movie={movie} key={movie.id}></Slider.Item>
                                 ))}
                         </Slider>
                     </div>
@@ -96,7 +116,7 @@ function Index(){
                     <div className={`col-md-11`}>
                         <Slider>
                             {movies.map(movie => (
-                                <Slider.Item movie={movie} key={movie.id}>item1</Slider.Item>
+                                <Slider.Item movie={movie} key={movie.id}></Slider.Item>
                                 ))}
                         </Slider>
                     </div>
@@ -109,7 +129,7 @@ function Index(){
                     <div className={`col-md-11`}>
                         <Slider>
                             {movies.map(movie => (
-                                <Slider.Item movie={movie} key={movie.id}>item1</Slider.Item>
+                                <Slider.Item movie={movie} key={movie.id}></Slider.Item>
                                 ))}
                         </Slider>
                     </div>
