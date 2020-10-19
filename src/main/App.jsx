@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import Content from '../components/template/content';
-import Header from '../components/template/header';
 
 function App() {
+
   return (
     <BrowserRouter >
       <div className={`wrapper`}>
-          <Header />
+          {/* <Header /> */}
           <Content />
       </div>
     </BrowserRouter>

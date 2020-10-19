@@ -8,10 +8,10 @@ import Series from '../../pages/series/index';
 
 import PageNotFound from '../../pages/pageNotFound/index';
 
-function Content(){
+function Content(props){
     return(
         <Switch>
-            <Route exact path='/' component={Movies} />
+            <Route exact path='/' component={Movies} component={() => <Movies {...props} />}/>
             <Route path='/series' component={Series} />
             <Route path="*" component={PageNotFound}/>
         </Switch>
