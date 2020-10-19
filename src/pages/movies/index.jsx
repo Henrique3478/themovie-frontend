@@ -14,6 +14,8 @@ import { getMovies, getGenres, getTrendings } from './actions';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+import moment from 'moment';
+
 import './style.css';
 
 const styleSearch = {
@@ -53,7 +55,7 @@ function Index(){
                 imageBg: row.backdrop_path,
                 title: row.original_title,
                 description: row.overview,
-                runtime: row.runtime
+                runtime: moment(row.runtime).format('H:mm:ss')
             }))
 
             if(result.length > 0){
