@@ -19,8 +19,6 @@ function Header() {
     console.log(values)
   }
 
-  // const dataGenres = [{id: '', name: 'selecione'}]
-
   return (
     <nav className={`navbar navbar-custom navbar-expand navbar-dark`}>
       <ul className="navbar-nav">
@@ -28,7 +26,7 @@ function Header() {
           <Link to={`/`} className={`nav-link`}>Filmes</Link>
         </li>
         <li className="nav-item">
-          <Link to={`/`} className={`nav-link`}>Séries</Link>
+          <Link to={`/series`} className={`nav-link`}>Séries</Link>
         </li>
       </ul>
       <ul className={`navbar-nav ml-auto`}>

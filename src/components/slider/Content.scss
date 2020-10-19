@@ -2,7 +2,7 @@
   position: relative;
   height: 37vw;
   width: 100%;
-  margin-top: -40px;
+  margin-top: 0;
 
   &__background,
   &__background__shadow,
@@ -72,7 +72,7 @@
 
   &__close {
     color: #fff;
-    width: 40px;
+    width: 20px;
     height: 40px;
     background: transparent;
     outline: none;

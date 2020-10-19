@@ -47,21 +47,6 @@ const movies = [
     }
 ];    
 
-const moviesRelease = [
-    {
-        id: 1,
-        image: 'https://i.pinimg.com/originals/86/c0/8e/86c08ed4610de49a5742cb3ba7d43fdd.jpg',
-    },
-    {
-        id: 2,
-        image: 'https://vaeveja.files.wordpress.com/2018/02/vurdalaki.jpg',
-    },
-    {
-        id: 3,
-        image: 'https://podcastloschicos.com.br/wp-content/uploads/2016/05/29maio4junho1.jpg',
-    },
-]
-
 function Index(){
 
     return(
@@ -69,11 +54,15 @@ function Index(){
             <div className={`container-fluid container-custom`}>
                 <div className="carousel-custom">
                     <Carousel showIndicators={false} showStatus={false} showThumbs={false}>
-                        {moviesRelease.map(row => (
-                            <div key={row.id}>
-                                <img className={`img-custom`} alt={``} src={row.image} />
-                            </div>
-                        ))}
+                        <div>
+                            <img className={`img-custom`} alt={``} src="https://occ-0-4356-185.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABffpRGxaTHHjcCcgchWPQdBIPrcwnxbeXWtfV4YcxPK_Ff1RJ5rZVu_tCEii8KrqCnAHNfRSct13LvxAmOd57HeO6H1z.webp?r=732" />
+                        </div>
+                        <div>
+                            <img className={`img-custom`} alt={``} src="https://occ-0-4356-185.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABffpRGxaTHHjcCcgchWPQdBIPrcwnxbeXWtfV4YcxPK_Ff1RJ5rZVu_tCEii8KrqCnAHNfRSct13LvxAmOd57HeO6H1z.webp?r=732" />
+                        </div>
+                        <div>
+                            <img className={`img-custom`} alt={``} src="https://occ-0-4356-185.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABffpRGxaTHHjcCcgchWPQdBIPrcwnxbeXWtfV4YcxPK_Ff1RJ5rZVu_tCEii8KrqCnAHNfRSct13LvxAmOd57HeO6H1z.webp?r=732" />
+                        </div>
                     </Carousel>
                 </div>
                 <div className={`row justify-content-center`}> 
